@@ -19,6 +19,7 @@ navselected:Navbar[];
   }
   selectednav:SelectedNav[]=[]
   ngOnInit(): void {
+    this.getSelectedAllMenü()
 
 
   }

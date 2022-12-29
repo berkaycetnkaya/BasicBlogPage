@@ -25,6 +25,7 @@ export class HomepagesetsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllMenü();
+    this.getSelectedAllMenü();
 
 
   }
@@ -73,6 +74,9 @@ deleted(name:string){
   SendSets(name:string){
     let carModel= Object.assign({},name)
 
+  }
+  deleteSelected(name:SelectedNav){
+this.selected.delete(name)
   }
 
 }

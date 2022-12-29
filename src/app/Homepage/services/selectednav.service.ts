@@ -14,6 +14,8 @@ export class SelectednavService {
   constructor(private http:HttpClient) { }
 
 Url="https://localhost:7214/api/SelectedNavbar/"
+
+//https://localhost:7214/api/SelectedNavbar/getall
   getNavbars():Observable<NavListResponseModel<SelectedNav>>{
     let newPath=this.Url+"getall"
 
