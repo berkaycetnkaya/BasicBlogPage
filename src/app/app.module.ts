@@ -27,7 +27,13 @@ import { HomepageComponent } from './Homepage/components/homepage/homepage.compo
 import { HomePageNavComponent } from './Homepage/components/home-page-nav/home-page-nav.component';
 import { HomepageloginComponent } from './Homepage/components/homepagelogin/homepagelogin.component';
 import { AdminpanelComponent } from './Homepage/components/adminpanel/adminpanel.component';
+import { UseraddComponent } from './Homepage/components/useradd/useradd/useradd.component';
+import { NavbaraddComponent } from './Homepage/components/navbarAdd/navbaradd/navbaradd.component';
+import { HomepagesetsComponent } from './Homepage/components/homepageSettings/homepagesets/homepagesets.component';
+import { ParentComponent } from './Homepage/components/parent/parent.component';
 
+
+import {MatCheckboxDefaultOptions, MatCheckboxModule, MAT_CHECKBOX_DEFAULT_OPTIONS} from '@angular/material/checkbox';
 
 
 
@@ -51,6 +57,10 @@ import { AdminpanelComponent } from './Homepage/components/adminpanel/adminpanel
     HomePageNavComponent,
     HomepageloginComponent,
     AdminpanelComponent,
+    UseraddComponent,
+    NavbaraddComponent,
+    HomepagesetsComponent,
+    ParentComponent,
 
   ],
   imports: [
@@ -62,10 +72,12 @@ import { AdminpanelComponent } from './Homepage/components/adminpanel/adminpanel
       positionClass:"toast-bottom-right"
     }),
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCheckboxModule
   ],
   providers: [
-    {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true}
+    {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor,multi:true},
+    {provide: MAT_CHECKBOX_DEFAULT_OPTIONS, useValue: { clickAction: 'noop' } as MatCheckboxDefaultOptions}
 
   ],
   bootstrap: [AppComponent]

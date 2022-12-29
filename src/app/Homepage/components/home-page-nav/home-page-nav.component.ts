@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Navbar } from '../../models/navbar';
+import { SelectedNav } from '../../models/selectedNav';
 
-import { NavbarService } from '../../services/navbar.service';
+
+import { SelectednavService } from '../../services/selectednav.service';
 
 @Component({
   selector: 'app-home-page-nav',
@@ -9,21 +11,22 @@ import { NavbarService } from '../../services/navbar.service';
   styleUrls: ['./home-page-nav.component.css']
 })
 export class HomePageNavComponent implements OnInit {
-navs:Navbar[];
-  constructor(private navService:NavbarService) {
+
+navselected:Navbar[];
+  constructor(private selectedNav:SelectednavService) {
 
 
   }
-
+  selectednav:SelectedNav[]=[]
   ngOnInit(): void {
-    this.getAllMenü()
+
 
   }
-
-  getAllMenü(){
-    this.navService.getNavbars().subscribe(response=>{
-      this.navs=response.data
+  getSelectedAllMenü(){
+    this.selectedNav.getNavbars().subscribe(response=>{
+      this.selectednav=response.data
 
     })
   }
+
 }

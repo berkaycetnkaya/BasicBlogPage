@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="homepage">Home</a>
         </li>
-        <li class="nav-item" *ngFor="let nav of navs">
-          <a  class="nav-link active" aria-current="page" href="#">{{nav.title}}</a>
+        <li class="nav-item" *ngFor="let select of selectednav"  >
+          <a  class="nav-link active" aria-current="page" href="#">{{select.title}}</a>
         </li>
 
       </ul>

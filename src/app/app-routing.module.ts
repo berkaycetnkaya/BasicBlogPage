@@ -13,12 +13,22 @@ import { LoginGuard } from './guards/login.guard';
 import { AdminpanelComponent } from './Homepage/components/adminpanel/adminpanel.component';
 import { HomepageComponent } from './Homepage/components/homepage/homepage.component';
 import { HomepageloginComponent } from './Homepage/components/homepagelogin/homepagelogin.component';
+import { HomepagesetsComponent } from './Homepage/components/homepageSettings/homepagesets/homepagesets.component';
+import { NavbaraddComponent } from './Homepage/components/navbarAdd/navbaradd/navbaradd.component';
+import { UseraddComponent } from './Homepage/components/useradd/useradd/useradd.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full" ,component:HomepageComponent},
   {path:"homepage" ,component:HomepageComponent},
   {path:"adminpanel" ,component:AdminpanelComponent},
   {path:"login" ,component:HomepageloginComponent},
+  {path:"Useradd" ,component:UseraddComponent},
+  {path:"NavbarAdd" ,component:NavbaraddComponent},
+  {path:"Homepagesettings" ,component:HomepagesetsComponent},
+
+
+
+
 
 
 ];
