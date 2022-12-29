@@ -18,22 +18,11 @@ export class AppComponent implements OnInit {
  }
 
   ngOnInit(): void {
-    this.ıfPageIsCars();
+
 
   }
-  title = 'RentACar';
+  title = 'Blog';
 
-ıfPageIsCars(){
-  let currentRoute = this.router.getCurrentNavigation.name
-  console.log(currentRoute + "burada")
-  if(currentRoute==="/cars"){
 
-    return this.dataload=true;
-  }
-  else{
-    return this.dataload=false;
-  }
-
-}
 
 }

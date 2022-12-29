@@ -23,6 +23,10 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { RegisterComponent } from './compenents/register/register.component';
 import { DeleteCarComponent } from './compenents/delete-car/delete-car.component';
 import { DenemelerimComponent } from './compenents/denemelerim/denemelerim.component';
+import { HomepageComponent } from './Homepage/components/homepage/homepage.component';
+import { HomePageNavComponent } from './Homepage/components/home-page-nav/home-page-nav.component';
+import { HomepageloginComponent } from './Homepage/components/homepagelogin/homepagelogin.component';
+import { AdminpanelComponent } from './Homepage/components/adminpanel/adminpanel.component';
 
 
 
@@ -43,6 +47,10 @@ import { DenemelerimComponent } from './compenents/denemelerim/denemelerim.compo
     RegisterComponent,
     DeleteCarComponent,
     DenemelerimComponent,
+    HomepageComponent,
+    HomePageNavComponent,
+    HomepageloginComponent,
+    AdminpanelComponent,
 
   ],
   imports: [

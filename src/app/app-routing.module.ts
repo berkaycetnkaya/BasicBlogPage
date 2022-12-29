@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
 import { BrandComponent } from './compenents/brand/brand.component';
 import { CarAddComponent } from './compenents/car-add/car-add.component';
 import { CarComponent } from './compenents/car/car.component';
@@ -9,18 +10,17 @@ import { DenemelerimComponent } from './compenents/denemelerim/denemelerim.compo
 import { LoginComponent } from './compenents/login/login.component';
 import { RegisterComponent } from './compenents/register/register.component';
 import { LoginGuard } from './guards/login.guard';
+import { AdminpanelComponent } from './Homepage/components/adminpanel/adminpanel.component';
+import { HomepageComponent } from './Homepage/components/homepage/homepage.component';
+import { HomepageloginComponent } from './Homepage/components/homepagelogin/homepagelogin.component';
 
 const routes: Routes = [
-  {path:"",pathMatch:"full" ,component:CarComponent},
-  {path:"cars",component:CarComponent},
-  {path:"brands",component:BrandComponent},
-  {path:"colors",component:ColorComponent},
-  {path:"cars/brands/:id",component:CarComponent},
-  {path:"cars/add",component:CarAddComponent,canActivate:[LoginGuard]},
-  {path:"login",component:LoginComponent},
-  {path:"register",component:RegisterComponent},
-  {path: "cars/delete",component:DeleteCarComponent},
-  {path:"denemelerim",component:DenemelerimComponent}
+  {path:"",pathMatch:"full" ,component:HomepageComponent},
+  {path:"homepage" ,component:HomepageComponent},
+  {path:"adminpanel" ,component:AdminpanelComponent},
+  {path:"login" ,component:HomepageloginComponent},
+
+
 ];
 // guardı pathin içinde hangisinde kullanacaksan oraya yazıyorsun canactivate: [loginguard]
 // birden fazla guard ekleyebilirsin ondan dolayı array dönüyor

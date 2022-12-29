@@ -1,0 +1,40 @@
+
+<div class="container">
+
+  <div class="row">
+
+    <div *ngIf="!isAdminLogin()" class="col-md-12">
+     <app-homepagelogin></app-homepagelogin>
+    </div>
+    <div *ngIf="isAdminLogin()"  class="col-md-12">
+    <app-adminpanel></app-adminpanel>
+     </div>
+
+
+
+  </div>
+
+
+
+
+
+</div>
+
+<div>
+
+</div>
+<div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
