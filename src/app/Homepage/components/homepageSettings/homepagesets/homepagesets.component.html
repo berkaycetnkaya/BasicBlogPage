@@ -11,10 +11,10 @@
         <label class="form-check-label" for="flexCheckDefault"  >
           {{nav.title}}
         </label>
-
+        <button   class="btn btn-outline-success" type="submit" (click)="navToSelectedNav(nav)" ><small>Yeni Ekle</small></button>
 
       </div>
-      <button   class="btn btn-outline-success" type="submit" ><small>Yeni Ekle</small></button>
+      
 
     </div>
     <div  class="col-md-5">
@@ -26,8 +26,9 @@
         <label class="form-check-label" for="flexCheckDefault"  >
           {{nav.title}}
         </label>
+        <button   class="btn btn-outline-success" type="submit" (click)="delete(nav)"  ><small>Çıkar</small></button>
       </div>
-      <button   class="btn btn-outline-success" type="submit"   ><small>Çıkar</small></button>
+      
 
     </div>
     <div   class="col-md-2">

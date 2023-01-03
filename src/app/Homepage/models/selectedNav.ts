@@ -1,4 +1,5 @@
 export interface SelectedNav{
   id:number,
-  title:string
+  title:string,
+  content:string,
  }

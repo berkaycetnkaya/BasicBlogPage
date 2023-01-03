@@ -11,6 +11,8 @@ import { LoginComponent } from './compenents/login/login.component';
 import { RegisterComponent } from './compenents/register/register.component';
 import { LoginGuard } from './guards/login.guard';
 import { AdminpanelComponent } from './Homepage/components/adminpanel/adminpanel.component';
+import { ContentComponent } from './Homepage/components/content/content.component';
+import { HomePageNavComponent } from './Homepage/components/home-page-nav/home-page-nav.component';
 import { HomepageComponent } from './Homepage/components/homepage/homepage.component';
 import { HomepageloginComponent } from './Homepage/components/homepagelogin/homepagelogin.component';
 import { HomepagesetsComponent } from './Homepage/components/homepageSettings/homepagesets/homepagesets.component';
@@ -25,6 +27,7 @@ const routes: Routes = [
   {path:"Useradd" ,component:UseraddComponent},
   {path:"NavbarAdd" ,component:NavbaraddComponent},
   {path:"Homepagesettings" ,component:HomepagesetsComponent},
+  {path:"nav/#",component:ContentComponent}
 
 
 

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" id="nav">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,7 +10,8 @@
           <a class="nav-link active" aria-current="page" href="homepage">Home</a>
         </li>
         <li class="nav-item" *ngFor="let select of selectednav"  >
-          <a  class="nav-link active" aria-current="page" href="#">{{select.title}}</a>
+          <a  class="nav-link active" aria-current="page"  href="#{{select.title}}"  routerLink="nav/#"  (click)="getId(select.id)" >{{select.title}} </a>
+          
         </li>
 
       </ul>

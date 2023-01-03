@@ -4,6 +4,7 @@ import { SelectedNav } from '../../models/selectedNav';
 
 
 import { SelectednavService } from '../../services/selectednav.service';
+import { SharingService } from '../../services/sharing.service';
 
 @Component({
   selector: 'app-home-page-nav',
@@ -11,15 +12,18 @@ import { SelectednavService } from '../../services/selectednav.service';
   styleUrls: ['./home-page-nav.component.css']
 })
 export class HomePageNavComponent implements OnInit {
+ 
+navselected:Navbar[]=[];
 
-navselected:Navbar[];
-  constructor(private selectedNav:SelectednavService) {
+sayı2:number;
+  constructor(private selectedNav:SelectednavService,private sharing:SharingService) {
 
 
   }
   selectednav:SelectedNav[]=[]
   ngOnInit(): void {
     this.getSelectedAllMenü()
+    
 
 
   }
@@ -29,5 +33,14 @@ navselected:Navbar[];
 
     })
   }
+  getId(id:number){
+this.sayı2=id
+this.sharing.setId(id);
+console.log(id)
+console.log(this.sayı2+"ssayı 2")
+
+  }
+
+  
 
 }

@@ -1,4 +1,5 @@
 export interface Navbar{
  id:number,
- title:string
+ title:string,
+ content:string,
 }

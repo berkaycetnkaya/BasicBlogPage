@@ -18,11 +18,15 @@ export class AppComponent implements OnInit {
  }
 
   ngOnInit(): void {
+    this.fakelogin();
 
 
   }
   title = 'Blog';
 
+  fakelogin(){
+    localStorage.setItem("token","asdasd")
+  }
 
 
 }

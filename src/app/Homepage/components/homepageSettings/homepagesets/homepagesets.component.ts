@@ -1,5 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
+import { ToastrService } from 'ngx-toastr';
+import { empty } from 'rxjs';
 import { Navbar } from 'src/app/Homepage/models/navbar';
 import { SelectedNav } from 'src/app/Homepage/models/selectedNav';
 import { NavbarService } from 'src/app/Homepage/services/navbar.service';
@@ -13,10 +16,12 @@ import { SelectednavService } from 'src/app/Homepage/services/selectednav.servic
 export class HomepagesetsComponent implements OnInit {
   navs:Navbar[]=[]
   selectednav:SelectedNav[]=[]
+  selectednavi:SelectedNav
+ 
   snav:string[]=[]
-
+wait=false;
   @Output() childToParent = new EventEmitter<String>();
- constructor(private nav:NavbarService,private selected:SelectednavService) {
+ constructor(private nav:NavbarService,private selectedservice:SelectednavService,private toast:ToastrService) {
 
 
  }
@@ -26,6 +31,7 @@ export class HomepagesetsComponent implements OnInit {
   ngOnInit(): void {
     this.getAllMenü();
     this.getSelectedAllMenü();
+    
 
 
   }
@@ -36,7 +42,7 @@ export class HomepagesetsComponent implements OnInit {
     })
   }
   getSelectedAllMenü(){
-    this.selected.getNavbars().subscribe(response=>{
+    this.selectedservice.getNavbars().subscribe(response=>{
       this.selectednav=response.data
 
     })
@@ -71,12 +77,56 @@ deleted(name:string){
 
 
   }
+
+
+
   SendSets(name:string){
     let carModel= Object.assign({},name)
 
   }
   deleteSelected(name:SelectedNav){
-this.selected.delete(name)
+this.selectedservice.delete(name)
   }
 
+  navToSelectedNav(nav:SelectedNav){
+    
+    nav.id=0;
+  
+    let userModel= Object.assign({},nav.title,nav.content)
+  console.log(userModel+"bu usermodel")
+  console.log(this.selectednavi+"navi")
+  this.wait=true;
+  
+    console.log(nav)
+   
+   if(this.wait){
+
+    this.selectedservice.add(nav).subscribe(response=>{
+        
+        
+      this.toast.success(response.message)
+      console.log(userModel)
+      window.location.reload();
+    },error=>{
+      this.toast.error(error.error.error)
+    })
+
+   }
+      
+ 
+  
 }
+delete(nav:SelectedNav){
+this.selectedservice.delete(nav).subscribe(response=>{
+  this.toast.success(response.message)
+  window.location.reload();
+},error=>{
+  this.toast.error(error.error.error)
+})
+}
+
+  }
+
+  
+
+

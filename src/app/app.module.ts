@@ -34,6 +34,7 @@ import { ParentComponent } from './Homepage/components/parent/parent.component';
 
 
 import {MatCheckboxDefaultOptions, MatCheckboxModule, MAT_CHECKBOX_DEFAULT_OPTIONS} from '@angular/material/checkbox';
+import { ContentComponent } from './Homepage/components/content/content.component';
 
 
 
@@ -61,6 +62,7 @@ import {MatCheckboxDefaultOptions, MatCheckboxModule, MAT_CHECKBOX_DEFAULT_OPTIO
     NavbaraddComponent,
     HomepagesetsComponent,
     ParentComponent,
+    ContentComponent,
 
   ],
   imports: [

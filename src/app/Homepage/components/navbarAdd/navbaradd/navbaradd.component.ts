@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
-import { CarService } from 'src/app/services/car.service';
+import { NavbarService } from 'src/app/Homepage/services/navbar.service';
+
 
 @Component({
   selector: 'app-navbaradd',
@@ -10,21 +11,22 @@ import { CarService } from 'src/app/services/car.service';
 })
 export class NavbaraddComponent implements OnInit {
   userAddForm:FormGroup
-  constructor(private formsBuilder:FormBuilder, private carService:CarService, private toastrService:ToastrService ) {
+  constructor(private formsBuilder:FormBuilder, private navbar:NavbarService, private toastrService:ToastrService ) {
 
   }
 
 
   ngOnInit(): void {
     this.createCarAddForm();
-    this.add();
+    
   }
 
   add(){
     if(this.userAddForm.valid){
       let userModel= Object.assign({},this.userAddForm.value)
-        this.carService.add(userModel).subscribe(data=>{
+        this.navbar.add(userModel).subscribe(data=>{
           console.log(data)
+          console.log(userModel)
           this.toastrService.success(data.message,"Başarılı")
         },dataError=>{
 
@@ -54,6 +56,7 @@ this.userAddForm=this.formsBuilder.group({
 
 
   title:["",Validators.required],
+  content:["",Validators.required],
 
 
 

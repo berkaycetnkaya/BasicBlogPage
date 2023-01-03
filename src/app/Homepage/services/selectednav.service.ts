@@ -12,7 +12,7 @@ import { SelectedNav } from '../models/selectedNav';
 export class SelectednavService {
 
   constructor(private http:HttpClient) { }
-
+// https://localhost:7214/api/SelectedNavbar/add
 Url="https://localhost:7214/api/SelectedNavbar/"
 
 //https://localhost:7214/api/SelectedNavbar/getall
@@ -32,5 +32,14 @@ Url="https://localhost:7214/api/SelectedNavbar/"
     return this.http.post<NavResponseModel>(newPath,nav)
 
   }
+
+  getbyid(id:number):Observable<NavListResponseModel<SelectedNav>> {
+
+
+    //https://localhost:7214/api/SelectedNavbar/getbyid?id=8
+    let newPath=this.Url+"SelectedNavbar/getbyid?id="+id
+
+    return  this.http.get<NavListResponseModel<SelectedNav>>(newPath)
+    }
 
 }

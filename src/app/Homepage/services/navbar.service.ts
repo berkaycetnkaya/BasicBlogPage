@@ -12,6 +12,7 @@ export class NavbarService {
 
   constructor(private http:HttpClient) { }
 
+  //https://localhost:7214/api/Navbar/getall
 Url="https://localhost:7214/api/Navbar/"
   getNavbars():Observable<NavListResponseModel<Navbar>>{
     let newPath=this.Url+"getall"
