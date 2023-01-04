@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { NavbarService } from 'src/app/Homepage/services/navbar.service';
 
@@ -11,7 +12,7 @@ import { NavbarService } from 'src/app/Homepage/services/navbar.service';
 })
 export class NavbaraddComponent implements OnInit {
   userAddForm:FormGroup
-  constructor(private formsBuilder:FormBuilder, private navbar:NavbarService, private toastrService:ToastrService ) {
+  constructor(private formsBuilder:FormBuilder, private navbar:NavbarService, private toastrService:ToastrService, private rout:Router ) {
 
   }
 
@@ -63,6 +64,9 @@ this.userAddForm=this.formsBuilder.group({
 
 
 })
+  }
+  goToDelete(){
+    this.rout.navigate(["NavbarDelete"])
   }
 
 }

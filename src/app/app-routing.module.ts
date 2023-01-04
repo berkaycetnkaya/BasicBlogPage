@@ -16,6 +16,7 @@ import { HomePageNavComponent } from './Homepage/components/home-page-nav/home-p
 import { HomepageComponent } from './Homepage/components/homepage/homepage.component';
 import { HomepageloginComponent } from './Homepage/components/homepagelogin/homepagelogin.component';
 import { HomepagesetsComponent } from './Homepage/components/homepageSettings/homepagesets/homepagesets.component';
+import { NavbarDeleteComponent } from './Homepage/components/navbar-delete/navbar-delete.component';
 import { NavbaraddComponent } from './Homepage/components/navbarAdd/navbaradd/navbaradd.component';
 import { UseraddComponent } from './Homepage/components/useradd/useradd/useradd.component';
 
@@ -27,7 +28,8 @@ const routes: Routes = [
   {path:"Useradd" ,component:UseraddComponent},
   {path:"NavbarAdd" ,component:NavbaraddComponent},
   {path:"Homepagesettings" ,component:HomepagesetsComponent},
-  {path:"homepage/navi/:id",component:ContentComponent}
+  {path:"homepage/navi/:id",component:ContentComponent},
+  {path:"NavbarDelete",component:NavbarDeleteComponent}
 
 
 
