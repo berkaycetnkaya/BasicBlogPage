@@ -5,6 +5,9 @@ import { Observable } from 'rxjs';
 import { NavListResponseModel } from '../models/navListResponseModel';
 import { NavResponseModel } from '../models/navResponseModel';
 import { SelectedNav } from '../models/selectedNav';
+import { NavSingleResponseModel } from '../models/singleResponseModel';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -33,13 +36,14 @@ Url="https://localhost:7214/api/SelectedNavbar/"
 
   }
 
-  getbyid(id:number):Observable<NavListResponseModel<SelectedNav>> {
+  getbyid(id:number):Observable<NavSingleResponseModel<SelectedNav>> {
 
 
     //https://localhost:7214/api/SelectedNavbar/getbyid?id=8
-    let newPath=this.Url+"SelectedNavbar/getbyid?id="+id
+    let newPath=this.Url+"getbyid?id="+id
+    //https://localhost:7214/api/SelectedNavbar/getbyid?id=2003
 
-    return  this.http.get<NavListResponseModel<SelectedNav>>(newPath)
+    return  this.http.get<NavSingleResponseModel<SelectedNav>>(newPath)
     }
 
 }

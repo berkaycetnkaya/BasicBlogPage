@@ -34,7 +34,7 @@ sayı2:number;
     })
   }
   getId(id:number){
-this.sayı2=id
+
 this.sharing.setId(id);
 console.log(id)
 console.log(this.sayı2+"ssayı 2")

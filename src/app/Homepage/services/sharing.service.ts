@@ -7,14 +7,17 @@ export class SharingService {
 
   constructor() { }
 
-  sayı2:number;
-  setId(sayı:number){
-this.sayı2=sayı
-return this.sayı2
+  sayi2:number;
+ 
+ 
+ 
+  setId(sayi:number){
+this.sayi2=sayi
+return this.sayi2
   }
   getId(){
 
   
-    return this.sayı2;
+    return this.sayi2;
   }
 }

@@ -27,7 +27,7 @@ const routes: Routes = [
   {path:"Useradd" ,component:UseraddComponent},
   {path:"NavbarAdd" ,component:NavbaraddComponent},
   {path:"Homepagesettings" ,component:HomepagesetsComponent},
-  {path:"nav/#",component:ContentComponent}
+  {path:"homepage/navi/:id",component:ContentComponent}
 
 
 

@@ -9,8 +9,8 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="homepage">Home</a>
         </li>
-        <li class="nav-item" *ngFor="let select of selectednav"  >
-          <a  class="nav-link active" aria-current="page"  href="#{{select.title}}"  routerLink="nav/#"  (click)="getId(select.id)" >{{select.title}} </a>
+        <li class="nav"   >
+          <a  *ngFor="let select of selectednav" class="nav-link active" aria-current="page"    href="homepage/navi/{{select.id}}"  (click)="getId(select.id)" >{{select.title}} </a>
           
         </li>
 
