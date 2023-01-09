@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { SelectedNav } from '../../models/selectedNav';
 import { SelectednavService } from '../../services/selectednav.service';
 import { SharingService } from '../../services/sharing.service';
+import { HomePageNavComponent } from '../home-page-nav/home-page-nav.component';
 
 @Component({
   selector: 'app-content',
@@ -11,6 +12,9 @@ import { SharingService } from '../../services/sharing.service';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
+
+@ViewChild(HomePageNavComponent) private childpage:HomePageNavComponent
+
   data=false;
   navbars:SelectedNav;
  href:string="";
@@ -26,6 +30,8 @@ export class ContentComponent implements OnInit {
     // this.getContent();
     this.mükemmelmethod();
 this.getSelectedId();
+
+
 
 
 
@@ -48,6 +54,9 @@ this.strarray = this.router.getCurrentNavigation()
   console.log(this.strarray)
   console.log(this.navbars)
   }
+  getcontent(){
+
+  }
   mükemmelmethod(){
     
     
@@ -62,6 +71,8 @@ this.strarray = this.router.getCurrentNavigation()
        this.navbars=response.data
        console.log(this.navbars)
        this.data=true
+
+       // bu duzelecek
        
        
        

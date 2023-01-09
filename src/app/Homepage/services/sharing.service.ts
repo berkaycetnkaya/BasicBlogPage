@@ -1,23 +1,23 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SharingService {
-
+  sayi3:number;
   constructor() { }
-
-  sayi2:number;
+  
  
  
  
   setId(sayi:number){
-this.sayi2=sayi
-return this.sayi2
+this.sayi3=sayi
+console.log(this.sayi3+"sayı 2 service")
+return this.sayi3
   }
   getId(){
 
   
-    return this.sayi2;
+    return this.sayi3;
   }
 }

@@ -14,21 +14,23 @@ import { SharingService } from '../../services/sharing.service';
 export class HomePageNavComponent implements OnInit {
  
 navselected:Navbar[]=[];
+onenav:Navbar
 
 sayı2:number;
-  constructor(private selectedNav:SelectednavService,private sharing:SharingService) {
+  constructor(private selectedNavv:SelectednavService,private sharing:SharingService) {
 
 
   }
   selectednav:SelectedNav[]=[]
   ngOnInit(): void {
     this.getSelectedAllMenü()
+    this.sharing.getId();
     
 
 
   }
   getSelectedAllMenü(){
-    this.selectedNav.getNavbars().subscribe(response=>{
+    this.selectedNavv.getNavbars().subscribe(response=>{
       this.selectednav=response.data
 
     })
@@ -36,8 +38,12 @@ sayı2:number;
   getId(id:number){
 
 this.sharing.setId(id);
-console.log(id)
+console.log(id+"getıd id ")
 console.log(this.sayı2+"ssayı 2")
+this.selectedNavv.getbyid(id).subscribe(response=>{
+  response.data=this.onenav
+})
+
 
   }
 

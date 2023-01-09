@@ -36,6 +36,8 @@ import { ParentComponent } from './Homepage/components/parent/parent.component';
 import {MatCheckboxDefaultOptions, MatCheckboxModule, MAT_CHECKBOX_DEFAULT_OPTIONS} from '@angular/material/checkbox';
 import { ContentComponent } from './Homepage/components/content/content.component';
 import { NavbarDeleteComponent } from './Homepage/components/navbar-delete/navbar-delete.component';
+import { ChildComponent } from './İnput-output/component/child/child.component';
+import { ParentsComponent } from './İnput-output/component/parents/parents.component';
 
 
 
@@ -65,6 +67,8 @@ import { NavbarDeleteComponent } from './Homepage/components/navbar-delete/navba
     ParentComponent,
     ContentComponent,
     NavbarDeleteComponent,
+    ChildComponent,
+    ParentsComponent,
 
   ],
   imports: [

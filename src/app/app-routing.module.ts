@@ -19,17 +19,21 @@ import { HomepagesetsComponent } from './Homepage/components/homepageSettings/ho
 import { NavbarDeleteComponent } from './Homepage/components/navbar-delete/navbar-delete.component';
 import { NavbaraddComponent } from './Homepage/components/navbarAdd/navbaradd/navbaradd.component';
 import { UseraddComponent } from './Homepage/components/useradd/useradd/useradd.component';
+import { ChildComponent } from './İnput-output/component/child/child.component';
+import { ParentsComponent } from './İnput-output/component/parents/parents.component';
 
 const routes: Routes = [
-  {path:"",pathMatch:"full" ,component:HomepageComponent},
+  {path:"",pathMatch:"full" ,component:HomepageComponent,canActivate:[LoginGuard]},
   {path:"homepage" ,component:HomepageComponent},
-  {path:"adminpanel" ,component:AdminpanelComponent},
+  {path:"adminpanel" ,component:AdminpanelComponent,canActivate:[LoginGuard]},
   {path:"login" ,component:HomepageloginComponent},
   {path:"Useradd" ,component:UseraddComponent},
   {path:"NavbarAdd" ,component:NavbaraddComponent},
   {path:"Homepagesettings" ,component:HomepagesetsComponent},
   {path:"homepage/navi/:id",component:ContentComponent},
-  {path:"NavbarDelete",component:NavbarDeleteComponent}
+  {path:"NavbarDelete",component:NavbarDeleteComponent},
+  {path:"parent",component:ParentsComponent},
+  {path:"child",component:ChildComponent}
 
 
 
