@@ -71,6 +71,7 @@ this.strarray = this.router.getCurrentNavigation()
        this.navbars=response.data
        console.log(this.navbars)
        this.data=true
+       console.log(this.sharing.sayi3+"bu sharing")
 
        // bu duzelecek
        

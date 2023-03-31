@@ -38,7 +38,7 @@ sayı2:number;
   getId(id:number){
 
 this.sharing.setId(id);
-console.log(id+"getıd id ")
+console.log(this.sharing.sayi3+"getıd id ")
 console.log(this.sayı2+"ssayı 2")
 this.selectedNavv.getbyid(id).subscribe(response=>{
   response.data=this.onenav

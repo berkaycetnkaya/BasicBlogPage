@@ -4,7 +4,7 @@ import { inject, Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SharingService {
-  sayi3:number;
+  sayi3:number=0
   constructor() { }
   
  
